@@ -12,14 +12,10 @@ Use (bike), release (bike), check (bike)
 #### User story tables
 | Object | Messages |
 |---|---|
-|Bike | |
-|Docking Station | release_bike |
-
-| Object | Messages |
-|---|---|
-|Person| check_bike |
-|Bike| |
+|Person| |
+|Bike | working? |
+|DockingStation | release_bike |
 
 #### User story diagrams
-Docking_Station -> release_bike -> Bike   
 Person -> check_bike -> Bike
+Docking_Station -> release_bike -> Bike   
