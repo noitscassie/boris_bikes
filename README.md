@@ -21,6 +21,5 @@ Use (bike), release (bike), check (bike)
 |Bike| |
 
 #### User story diagrams
-
-Docking_Station -> release_bike -> Bike
+Docking_Station -> release_bike -> Bike   
 Person -> check_bike -> Bike
