@@ -1,7 +1,5 @@
 require "docking_station.rb"
 
 describe DockingStation do
-  it "text" do
-
-  end
+  it { is_expected.to respond_to(:release_bike) }
 end
