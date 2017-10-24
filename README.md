@@ -9,9 +9,17 @@ Person, bike, docking stations
 #### User story verbs
 Use (bike), release (bike), check (bike)
 
+#### User story tables
+| Object | Messages |
+|---|---|
+|Bike | |
+|Docking Station | release_bike |
 
 | Object | Messages |
 |---|---|
-|Person |  |
-|Bike | working? |
-|DockingStation | release_bike |
+|Person| check_bike |
+|Bike| |
+
+#### User story diagrams
+Docking_Station -> release_bike -> Bike   
+Person -> check_bike -> Bike
