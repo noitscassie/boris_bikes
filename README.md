@@ -12,11 +12,6 @@ Use (bike), release (bike), check (bike)
 
 | Object | Messages |
 |---|---|
-|Person | use_bike |
-|Bike | |
-|Docking Station | release_bike |
-
-| Object | Messages |
-|---|---|
-|Person| check_bike |
-|Bike| |
+|Person |  |
+|Bike | working? |
+|DockingStation | release_bike |
