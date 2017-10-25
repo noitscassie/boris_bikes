@@ -28,7 +28,13 @@ end
 describe "Allowing members of the public to check if there's any bikes" do
   station = DockingStation.new
     if station.available.length > 0
-      
-
+      it "Should return true as bikes are available" do
+        expect(station.any_bikes?).to eq(true)
+      end
+    else
+      it "Should return false as there are no bikes" do
+        expect(station.any_bikes?).to eq(false)
+      end
     end
+    #Write two tests instead of putting logic into one test 
   end
