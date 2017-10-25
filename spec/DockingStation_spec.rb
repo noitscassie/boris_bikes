@@ -1,5 +1,11 @@
 require 'dockingStation.rb'
 
+describe "Instantiating before(:each) variables" do
+before(:each) do
+  bike = Bike.new
+  station = DockingStation.new
+
+end
 
 describe DockingStation do
   it { should respond_to(:release_bike) }
@@ -39,3 +45,4 @@ describe "Allowing members of the public to check if there's any bikes" do
     #Write two tests instead of putting logic into one test
     #Look up before_each and after_each methods for test setup
   end
+end
