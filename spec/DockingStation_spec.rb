@@ -3,6 +3,7 @@ require 'dockingStation.rb'
 
 describe DockingStation do
   it { should respond_to(:release_bike) }
+  it { should respond_to(:dock)}
 end
 
 
@@ -14,6 +15,6 @@ describe  DockingStation.new.release_bike.working? do
   it { is_expected.to eq(true)}
 end
 
-describe DockingStation.new.dock(Bike.new) do
-  it { is_expected.to eq }
-end
+#describe DockingStation.new.dock(Bike.new) do
+#  it { is_expected.to eq("st") }
+#end
