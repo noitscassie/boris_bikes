@@ -13,3 +13,7 @@ end
 describe  DockingStation.new.release_bike.working? do
   it { is_expected.to eq(true)}
 end
+
+describe DockingStation.new.dock(Bike.new) do
+  it { is_expected.to eq }
+end
