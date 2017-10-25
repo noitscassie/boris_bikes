@@ -36,5 +36,6 @@ describe "Allowing members of the public to check if there's any bikes" do
         expect(station.any_bikes?).to eq(false)
       end
     end
-    #Write two tests instead of putting logic into one test 
+    #Write two tests instead of putting logic into one test
+    #Look up before_each and after_each methods for test setup
   end
