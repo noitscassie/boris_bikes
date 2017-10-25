@@ -20,6 +20,6 @@ describe "Testing to dock a bike" do
   bike = station.release_bike
   station.dock(bike)
   it "Adds a bike to a docking station" do
-    expect(station.available).to eq(station.available + 1)
+    expect(station.available.length).to eq(1)
   end
 end
