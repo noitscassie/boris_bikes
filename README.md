@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 **Transport for London, the body responsible for delivery of a new bike system, come to you with a plan: a network of docking stations and bikes that anyone can use. They want you to build a program that will emulate all the docking stations, bikes, and infrastructure (repair staff, and so on) required to make their dream a reality.**
 
 ***
@@ -33,3 +34,6 @@ What does this error mean:
 This error occurs when the code refers to a class or module that it can't find.
 Suggested solution:   
 Define a class or module with the name DockingStation.
+=======
+## Boris Bikes ##
+>>>>>>> 7b23b4061b5925bfb57562ff2c71e4994ef21a43
