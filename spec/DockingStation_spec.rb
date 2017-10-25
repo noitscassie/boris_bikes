@@ -12,9 +12,11 @@ describe DockingStation.new.release_bike do
 end
 
 describe  DockingStation.new.release_bike.working? do
-  it { is_expected.to eq(true)}
+  it { is_expected.to eq(truec tests that require arguments)}
 end
 
-#describe DockingStation.new.dock(Bike.new) do
-#  it { is_expected.to eq("st") }
-#end
+describe DockingStation.new.dock(Bike.new) do
+  it "Adds a bike to a docking station" do
+    is_expected.to eq("st")
+  end
+end
