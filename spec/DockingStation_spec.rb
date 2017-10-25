@@ -4,6 +4,7 @@ require 'dockingStation.rb'
 describe DockingStation do
   it { should respond_to(:release_bike) }
   it { should respond_to(:dock)}
+  it { should respond_to(:any_bikes?)}
 end
 
 
@@ -23,3 +24,11 @@ describe "Testing to dock a bike" do
     expect(station.available.length).to eq(1)
   end
 end
+
+describe "Allowing members of the public to check if there's any bikes" do
+  station = DockingStation.new
+    if station.available.length > 0
+      
+
+    end
+  end
