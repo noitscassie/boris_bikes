@@ -18,8 +18,9 @@ describe DockingStation do
   end
 
   it "releases a bike from the docking station" do
-    20.times{subject.dock(Bike.new)}
-    expect(subject.release_bike).to eq
+    20.times { subject.dock(Bike.new) }
+    bike = subject.bikes[-1]
+    expect(subject.release_bike).to eq bike
   end
 end
 
