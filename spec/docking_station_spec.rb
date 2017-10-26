@@ -29,4 +29,7 @@ describe DockingStation do
     expect(subject.bikes.length).to eq 19
   end
 
+ it 'set capacity to default if no value is given' do
+   expect(subject.capacity).to eq 20
+ end
 end
