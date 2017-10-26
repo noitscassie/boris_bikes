@@ -3,7 +3,7 @@ class DockingStation
   attr_reader :bike
 
   def release_bike
-
+    raise 'Sorry, no bikes are available'
     Bike.new
   end
 
