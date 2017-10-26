@@ -11,7 +11,7 @@ class DockingStation
     if @bikes.empty?
       raise 'Sorry, no bikes are available'
     end
-    Bike.new
+    @bikes.pop
   end
 
   def dock(bike)
@@ -19,6 +19,5 @@ class DockingStation
       raise "Sorry, the docking station is full"
     end
     @bikes << bike
-    @bikes[-1]
   end
 end
