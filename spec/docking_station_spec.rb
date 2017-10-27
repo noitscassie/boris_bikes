@@ -32,6 +32,15 @@ describe DockingStation do
     expect(subject.broken_bikes.detect{|x| x.working == true}).to eq nil
   end
 
+  it "will not release a broken bike to the user" do
+    bikes = []
+    10.times { bikes << Bike.new }
+    10.times { bikes << Bike.new(false) }
+    bikes.shuffle!
+    bikes.each {|x| subject.dock(x)}
+    expect(subject.bikes.detect{|x| x.working == false}).to eq nil
+  end
+
 end
 
 
