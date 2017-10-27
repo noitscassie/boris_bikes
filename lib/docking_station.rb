@@ -19,6 +19,12 @@ class DockingStation
     bike.working? ? @bikes << bike : @broken_bikes << bike
   end
 
+  def pass_broken_bikes
+    broken_bikes = @broken_bikes
+    @broken_bikes = []
+    broken_bikes
+  end
+
 
   private
 

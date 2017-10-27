@@ -45,4 +45,13 @@ describe DockingStation do
     expect(subject.bikes.detect{|x| x.working? == false}).to eq nil
   end
 
+  it "returns all of the broken bikes in a docking station" do
+    random_bikes.each {|x| subject.dock(x)}
+    expect(subject.pass_broken_bikes.length).to eq 5
+  end
+
+  it "text" do
+
+  end
+
 end
