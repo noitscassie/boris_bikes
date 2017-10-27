@@ -26,8 +26,7 @@ class DockingStation
   end
 
   def receive_fixed_bikes(bikes)
-    @bikes.concat(bikes)
-    bikes = []
+    bikes.each { |bike| dock(bike)}
   end
 
   private
