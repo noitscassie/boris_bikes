@@ -23,7 +23,14 @@ describe DockingStation do
     expect(subject.release_bike).to eq bike
   end
 
-  
+  it "reports bike as broken" do
+    bikes = []
+    5.times{bikes << Bike.new}
+    5.times{bikes << Bike.new(false)}
+    bikes.shuffle!
+    bikes.each{|x| subject.dock(x)}
+    expect(subject.broken_bikes.detect{|x| x.working == true}).to eq nil
+  end
 
 end
 
