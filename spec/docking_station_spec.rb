@@ -1,6 +1,14 @@
 require 'docking_station'
 
 describe DockingStation do
+
+  let(:random_bikes) do
+    bikes = []
+    5.times{bikes << Bike.new}
+    5.times{bikes << Bike.new(false)}
+    bikes.shuffle!
+  end
+
   it { is_expected.to respond_to(:release_bike) }
   it { is_expected.to respond_to(:dock).with(1).argument }
   it "docks a bike" do
@@ -23,20 +31,12 @@ describe DockingStation do
   end
 
   it "reports bike as broken" do
-    bikes = []
-    5.times{bikes << Bike.new}
-    5.times{bikes << Bike.new(false)}
-    bikes.shuffle!
-    bikes.each{|x| subject.dock(x)}
+    random_bikes.each{|x| subject.dock(x)}
     expect(subject.broken_bikes.detect{|x| x.working == true}).to eq nil
   end
 
   it "will not release a broken bike to the user" do
-    bikes = []
-    10.times { bikes << Bike.new }
-    10.times { bikes << Bike.new(false) }
-    bikes.shuffle!
-    bikes.each {|x| subject.dock(x)}
+    random_bikes.each {|x| subject.dock(x)}
     expect(subject.bikes.detect{|x| x.working == false}).to eq nil
   end
 
