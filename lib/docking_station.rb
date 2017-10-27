@@ -25,6 +25,10 @@ class DockingStation
     broken_bikes
   end
 
+  def receive_fixed_bikes(bikes)
+    @bikes.concat(bikes)
+    bikes = []
+  end
 
   private
 

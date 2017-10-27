@@ -56,6 +56,6 @@ describe DockingStation do
     expect(subject.broken_bikes).to eq []
   end
 
-  # it "receives a batch if fixed bikes from van"
+  it { is_expected.to respond_to(:receive_fixed_bikes).with(1).argument }
 
 end

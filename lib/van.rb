@@ -1,5 +1,5 @@
 class Van
-  attr_reader :bikes
+  attr_accessor :bikes
 
   def collect_bikes(bikes)
     @bikes = bikes
