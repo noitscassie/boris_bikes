@@ -1,7 +1,6 @@
-class Van
+class Garage
   attr_reader :bikes
-
-  def collect_bikes(bikes)
+  def receive_bikes(bikes)
     @bikes = bikes
   end
 end

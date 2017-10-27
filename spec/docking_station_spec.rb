@@ -50,8 +50,10 @@ describe DockingStation do
     expect(subject.pass_broken_bikes.length).to eq 5
   end
 
-  it "text" do
-
+  it "removes all broken bikes when passed" do
+    random_bikes.each {|x| subject.dock(x)}
+    subject.pass_broken_bikes
+    expect(subject.broken_bikes).to eq []
   end
 
 end
