@@ -7,4 +7,10 @@ class Garage
   def fix_bikes
     @bikes.map {|x| x.working = true }
   end
+
+  def pass_fixed_bikes
+    fixed_bikes = @bikes
+    @bikes = []
+    fixed_bikes
+  end
 end

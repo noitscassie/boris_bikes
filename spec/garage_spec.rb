@@ -11,4 +11,13 @@ describe Garage do
     subject.fix_bikes
     expect(subject.bikes.detect { |x| x.working? == false }).to eq nil
   end
+
+  it '#pass_fixed_bikes' do
+    broken_bikes = []
+    5.times { broken_bikes << Bike.new(false)}
+    subject.receive_bikes(broken_bikes)
+    subject.fix_bikes
+    subject.pass_fixed_bikes
+    expect(subject.bikes).to eq []
+  end
 end
