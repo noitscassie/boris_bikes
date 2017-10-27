@@ -1,4 +1,3 @@
-require "./lib/bike.rb"
 class DockingStation
   attr_reader :bikes, :broken_bikes, :capacity
   DEFAULT_CAPACITY = 20
